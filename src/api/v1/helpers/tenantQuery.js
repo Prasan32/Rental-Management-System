@@ -21,7 +21,8 @@ exports.query=(prefix)=>{
             description TEXT NOT NULL,
             address VARCHAR(255) NOT NULL,
             property_images VARCHAR(255) NOT NULL,
-            status VARCHAR(255) NOT NULL
+            status VARCHAR(255) NOT NULL,
+            revision MEDIUMTEXT
         );
         `
     ].join(' ')
