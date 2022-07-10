@@ -8,18 +8,19 @@ const joi=require('joi')
         address:joi.string().required(),
         identity_number:joi.string().required(),
         identification_document:joi.string().required(),
+        status:joi.boolean()
     })
     
     const {error}=tenantSchema.validate(body)
 
     if(error){
         return {
-            status:false,
-            message:error.message
+            STATUS:false,
+            MESSAGE:error.message
         }
     }else{
         return {
-            status:true
+            STATUS:true
         }
     }
 }
